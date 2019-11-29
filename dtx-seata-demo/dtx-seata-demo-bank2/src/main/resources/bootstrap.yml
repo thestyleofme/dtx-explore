@@ -1,0 +1,21 @@
+server:
+  port: 8700
+management:
+  server:
+    port: 8701
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+eureka:
+  instance:
+    # 以IP注册到注册中心
+    prefer-ip-address: true
+    hostname: localhost
+    lease-renewal-interval-in-seconds: 10
+    lease-expiration-duration-in-seconds: 30
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_DEFAULT_ZONE:http://${eureka.instance.hostname}:8761/eureka/}
+    registryFetchIntervalSeconds: 10
+    disable-delta: true

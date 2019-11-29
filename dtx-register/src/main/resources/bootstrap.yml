@@ -1,0 +1,9 @@
+server:
+  port: 8761
+management:
+  server:
+    port: 8762
+  endpoints:
+    web:
+      exposure:
+        include: '*'
