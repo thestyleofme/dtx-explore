@@ -25,7 +25,7 @@
 
     <modules>
         <module>dtx-register</module>
-        <module>dtx-demo</module>
+        <module>dtx-seata-demo</module>
     </modules>
 
     <dependencies>
